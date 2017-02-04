@@ -135,7 +135,7 @@ EvilBall.prototype.constructor =EvilBall;
 
    EvilBall.prototype.setControls=function(left,right,down,up){
         var _this = this;
-        window.onkeydown = function(e) {
+        window.addEventListener("keydown",function(e) {
             console.log(e.keyCode);
             if (e.keyCode === left) {
                 _this.x -= _this.velX;
@@ -146,7 +146,7 @@ EvilBall.prototype.constructor =EvilBall;
             } else if (e.keyCode === up) {
                 _this.y += _this.velY;
             }
-        }
+        });
     }
 
 
